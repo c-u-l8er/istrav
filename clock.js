@@ -181,4 +181,4 @@ function updateDateTime() {
 
 // Update immediately and then every second
 updateDateTime();
-setInterval(updateDateTime, 1000);
+setInterval(updateDateTime, 500);
