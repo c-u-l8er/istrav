@@ -9,8 +9,28 @@
                 align-items: center; /* Center vertically */
                 min-height: 100vh;
                 margin: 0;
-                background-color: #f0f0f0;
+                background-color: #fff;
                 font-family: Arial, sans-serif;
+            }
+
+            .header {
+                background: #000;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                padding: 5px 0 0;
+            }
+
+            nav {
+                width: 700px;
+                margin: 0 auto;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
             }
 
             .container {
@@ -21,16 +41,34 @@
             }
 
             canvas {
-                background: #fff;
                 border-radius: 10px;
+            }
+
+            #clockCanvas {
+                background: #fff;
+            }
+
+            #rulersCanvas {
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                width: 700px; /* Match clock canvas width */
             }
         </style>
     </head>
     <body>
+        <div class="header">
+            <nav>
+                <a href="https://istrav.com">https://istrav.com</a>
+                <span style="color: #fff">:::</span>
+                <span id="datetime" style="color: #fff"
+                    >current date and time</span
+                >
+            </nav>
+            <canvas id="rulersCanvas" width="700" height="80"></canvas>
+        </div>
         <div class="container">
             <canvas id="clockCanvas" width="700" height="1200"></canvas>
         </div>
         <script src="clock.js"></script>
+        <script src="rulers.js"></script>
     </body>
 </html>
