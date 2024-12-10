@@ -5,13 +5,14 @@ class Clock {
     this.width = this.canvas.width;
     this.height = this.canvas.height;
     this.centerX = this.width / 2;
-    this.centerY = this.height / 2;
+    this.centerY = this.height / 3.4;
     this.radius = Math.min(this.width, this.height) / 3;
     this.running = true;
 
-    this.pendulumLength = this.radius * 1.2;
+    this.pendulumLength = this.radius * 2;
     this.pendulumAngle = 0;
-    this.pendulumSpeed = 0.05;
+    this.pendulumSpeed = Math.PI;
+    this.pendulumOriginY = this.centerY + this.radius * 1; // Move pivot point lower
   }
 
   drawClockFace() {
@@ -64,30 +65,33 @@ class Clock {
     }
 
     // Draw logo
-    this.ctx.font = "italic bold 24px Arial";
+    this.ctx.font = "bold 24px Arial";
     this.ctx.fillStyle = "black";
     this.ctx.textAlign = "center";
     this.ctx.fillText("isTrav", this.centerX, this.centerY - this.radius * 0.3);
   }
 
   drawPendulum() {
-    // Update pendulum angle
+    // Update pendulum angle to swing once per second
+    // Divide by 1000 to convert milliseconds to seconds
     this.pendulumAngle =
-      (Math.sin(Date.now() * this.pendulumSpeed) * Math.PI) / 6;
+      (Math.sin((Date.now() / 1000) * this.pendulumSpeed) * Math.PI) / 12;
 
-    // Draw pendulum
+    // Calculate pendulum end position
     const pendulumX =
       this.centerX + Math.sin(this.pendulumAngle) * this.pendulumLength;
-    const pendulumY = this.centerY + this.radius * 1.2;
+    const pendulumY =
+      this.pendulumOriginY + Math.cos(this.pendulumAngle) * this.pendulumLength;
 
+    // Draw pendulum rod
     this.ctx.beginPath();
-    this.ctx.moveTo(this.centerX, this.centerY + this.radius * 0.5);
+    this.ctx.moveTo(this.centerX, this.pendulumOriginY);
     this.ctx.lineTo(pendulumX, pendulumY);
     this.ctx.lineWidth = 3;
     this.ctx.strokeStyle = "black";
     this.ctx.stroke();
 
-    // Draw pendulum bob
+    // Draw pendulum bob (weight)
     this.ctx.beginPath();
     this.ctx.arc(pendulumX, pendulumY, 20, 0, 2 * Math.PI);
     this.ctx.fillStyle = "gold";
