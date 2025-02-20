@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Analog Clock</title>
+        <title>isTrav: SaaS Solutions</title>
         <style>
             body {
                 display: flex;
@@ -30,14 +30,14 @@
 
             a {
                 color: #fff;
-                text-decoration: none;
+                text-decoration: underline;
             }
 
             .container {
                 display: flex;
                 justify-content: center; /* Center horizontally */
                 align-items: center; /* Center vertically */
-                padding: 20px;
+                padding: 20px 20px;
             }
 
             canvas {
@@ -46,6 +46,7 @@
 
             #clockCanvas {
                 background: #fff;
+                padding-top: 30px;
             }
 
             #rulersCanvas {
@@ -57,13 +58,16 @@
     <body>
         <div class="header">
             <nav>
-                <a href="https://istrav.com">https://istrav.com</a>
-                <span style="color: #fff">:::</span>
+                <a href="https://istrav.com">isTrav: SaaS Solutions</a>
+                <span style="color: #fff">by</span>
+                <a href="https://wrand.cc">wrand.cc</a>
+            </nav>
+            <canvas id="rulersCanvas" width="700" height="80"></canvas>
+            <div style="margin-top: -6px; margin-bottom: 4px">
                 <span id="datetime" style="color: #fff"
                     >current date and time</span
                 >
-            </nav>
-            <canvas id="rulersCanvas" width="700" height="80"></canvas>
+            </div>
         </div>
         <div class="container">
             <canvas id="clockCanvas" width="700" height="1200"></canvas>
