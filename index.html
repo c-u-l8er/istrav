@@ -801,9 +801,8 @@
         <div class="marketing">
             <div class="banner">
                 <div class="banner-subtitle">
-                    Building competative digital communities<br /> through interwoven information
-                    systems, real-time data, and collaborative platforms with tournament
-                    elements.
+                    Building competative digital substrates<br /> using interwoven information
+                    systems, real-time data, and collaborative platforms with Web3 technologies.
                 </div>
                 <div class="banner-title">WIN INTELLIGENCE OUTCOMES</div>
                 <a
@@ -817,16 +816,16 @@
             <br />
             <div class="notecards-container">
                 <div class="notecard">
-                    <div class="notecard-title">OUR SOLUTIONS</div>
+                    <div class="notecard-title">THE FUTURE OF THE INTERNET</div>
                     <div class="notecard-body">
-                        We engineer tournament-driven intelligence platforms
-                        that transform ideation into systematic competitive
-                        advantage. As part of the C U L8er ecosystem's 
-                        Idea Factory Laboratory #88 manufacturing process, isTrav specializes 
-                        in building distributed PacketFlow capability networks
-                        where ideas compete, evolve, and emerge through
-                        systematic validation tournaments using Phoenix/Elixir
-                        backends and SvelteKit tournament interfaces.
+                        We're building the next generation of internet applications 
+                        where you truly own your digital assets and data. Imagine 
+                        apps without middlemen taking fees, transactions without 
+                        banks charging processing costs, and digital ownership that 
+                        can't be taken away. We create platforms powered by Web3 
+                        technology—a new way of building online services that puts 
+                        control back in your hands through transparent, automated 
+                        systems that anyone can verify.
                     </div>
                     <a
                         href="https://discord.gg/27dBhn3zuc"
@@ -836,24 +835,24 @@
                     >
                 </div>
                 <div class="notecard">
-                    <div class="notecard-title">OUR FORMULA</div>
+                    <div class="notecard-title">HOW WE BUILD</div>
                     <div class="notecard-body">
-                        Tournament → Validation → Evolution → Deployment → Manufacturing:
+                        Design → Test → Secure → Launch → Grow:
                         <br />
                         <br />
-                        Our proven approach transforms uncertainty into 
-                        competitive advantage through systematic competition. 
-                        We start with multiple competing solutions, validate 
-                        them through rigorous tournaments, evolve the winners 
-                        through iterative competitions, deploy the champions 
-                        into production, and manufacture scalable competitive 
-                        advantages through our Idea Factory Laboratory #88 processes.
+                        We create digital services that run automatically without 
+                        needing traditional companies to operate them. First, we 
+                        design systems where rules are enforced by code instead of 
+                        corporations. Then we rigorously test for security. We verify 
+                        everything is safe and transparent. Finally, we launch and 
+                        scale these services so anyone worldwide can use them—no 
+                        permission needed, no accounts required, just instant access.
                     </div>
                     <a
-                        href="https://wrand.cc/laboratory"
+                        href="https://wrand.cc"
                         target="_blank"
                         class="notecard-btn"
-                        >Join Our Idea Factory</a
+                        >Learn More</a
                     >
                 </div>
             </div>
@@ -863,226 +862,6 @@
             </p>
             <br />
             <br />
-        </div>
-
-        <div class="demo-code">
-            <div class="container">
-                <div class="laboratory">
-                    <div class="lab-header">
-                        <h2 class="lab-title">isTrav Intelligence</h2>
-                        <p class="lab-subtitle">Tournament-Based Intelligence</p>
-                        <p class="lab-description">
-                            Competitive AI evaluation engine powered by Phoenix/SvelteKit architecture. 
-                            Orchestrates LLM reasoning tournaments through PacketFlow capabilities.
-                        </p>
-                    </div>
-                    
-                    <div class="tabs">
-                        <button class="tab active" data-tab="tournament">
-                            🏆 Core Tournament
-                        </button>
-                        <button class="tab" data-tab="orchestration">
-                            🎮 Live Session
-                        </button>
-                        <button class="tab" data-tab="distributed">
-                            🌐 Distributed
-                        </button>
-                        <button class="tab" data-tab="usage">
-                            💻 Usage
-                        </button>
-                    </div>
-                    
-                    <div class="tab-content">
-                        <div class="code-section active" data-section="tournament">
-                            <h3 class="section-title">
-                                <span class="icon">🏆</span>
-                                Core Tournament Capability
-                            </h3>
-                            <p class="section-description">Run competitive LLM reasoning tournaments with real-time consciousness scoring and analysis.</p>
-                            <pre><code class="language-elixir">capability :ai_reasoning_tournament do
-    intent "Run competitive LLM reasoning tournament with real-time scoring"
-    requires [:models, :challenge_prompt, :evaluation_criteria]
-    provides [:tournament_results, :consciousness_scores, :reasoning_analysis]
-    
-    effect :tournament_metrics, type: :histogram, name: "tournament_duration"
-    effect :consciousness_logging, level: :info
-    
-    execute fn payload, context ->
-        # Initialize tournament bracket
-        tournament = create_tournament_bracket(payload.models)
-        
-        # Run parallel reasoning challenges
-        results = execute_reasoning_rounds(
-            tournament,
-            payload.challenge_prompt,
-            payload.evaluation_criteria
-        )
-        
-        # Calculate consciousness assessment scores
-        consciousness_scores = assess_consciousness_indicators(results)
-        
-        {:ok, %{
-            tournament_results: results,
-            consciousness_scores: consciousness_scores,
-            reasoning_analysis: analyze_reasoning_patterns(results)
-        }}
-    end
-end</code></pre>
-                        </div>
-                        
-                        <div class="code-section" data-section="orchestration">
-                            <h3 class="section-title">
-                                <span class="icon">🎮</span>
-                                Real-Time Tournament Orchestration
-                            </h3>
-                            <p class="section-description">Orchestrate live AI tournaments with real-time spectator updates and parallel processing.</p>
-                            <pre><code class="language-elixir">capability :live_tournament_session do
-    intent "Orchestrate real-time AI tournament with live spectator updates"
-    requires [:session_id, :participating_models, :audience_channels]
-    provides [:session_state, :live_updates, :winner_prediction]
-    
-    pipeline do
-        step :initialize_tournament_arena,
-            from: [:session_id, :participating_models],
-            to: [:arena_state, :model_agents]
-        
-        parallel do
-            branch :reasoning_engine,
-                capability: :execute_reasoning_challenges,
-                from: [:model_agents, :arena_state],
-                to: [:reasoning_results]
-            
-            branch :audience_engagement,
-                capability: :stream_live_updates,
-                from: [:arena_state, :audience_channels],
-                to: [:engagement_metrics]
-            
-            branch :consciousness_monitoring,
-                capability: :monitor_consciousness_indicators,
-                from: [:reasoning_results],
-                to: [:consciousness_tracking]
-        end
-        
-        step :determine_tournament_winner,
-            from: [:reasoning_results, :consciousness_tracking],
-            to: [:session_state, :winner_prediction]
-    end
-end</code></pre>
-                        </div>
-                        
-                        <div class="code-section" data-section="distributed">
-                            <h3 class="section-title">
-                                <span class="icon">🌐</span>
-                                Distributed Tournament Infrastructure
-                            </h3>
-                            <p class="section-description">Coordinate tournaments across laboratory networks with persistent state and consciousness leaderboards.</p>
-                            <pre><code class="language-elixir">actor_capability :tournament_coordinator do
-    intent "Coordinate distributed tournaments across laboratory networks"
-    
-    initial_state %{
-        active_tournaments: %{},
-        laboratory_nodes: [],
-        consciousness_leaderboard: %{}
-    }
-    
-    state_persistence :distributed
-    
-    execute fn payload, context ->
-        case payload.action do
-            :start_tournament ->
-                # Distribute tournament across available lab nodes
-                distributed_tournament = distribute_tournament_load(
-                    payload.tournament_spec,
-                    state.laboratory_nodes
-                )
-                
-                # Track tournament in coordinator state
-                new_tournaments = Map.put(
-                    state.active_tournaments,
-                    payload.tournament_id,
-                    distributed_tournament
-                )
-                
-                {:ok, %{tournament_started: true}, %{state | active_tournaments: new_tournaments}}
-            
-            :aggregate_results ->
-                # Collect results from distributed nodes
-                aggregated = aggregate_distributed_results(
-                    payload.tournament_id,
-                    state.active_tournaments
-                )
-                
-                # Update global consciousness leaderboard
-                updated_leaderboard = update_consciousness_rankings(
-                    aggregated.results,
-                    state.consciousness_leaderboard
-                )
-                
-                {:ok, aggregated, %{state | consciousness_leaderboard: updated_leaderboard}}
-        end
-    end
-end</code></pre>
-                        </div>
-                        
-                        <div class="code-section" data-section="usage">
-                            <h3 class="section-title">
-                                <span class="icon">💻</span>
-                                Frontend Usage Example
-                            </h3>
-                            <p class="section-description">Start tournaments from Phoenix/SvelteKit frontend with simple API calls.</p>
-                            <pre><code class="language-javascript">// Start a tournament from Phoenix/SvelteKit frontend
-const tournament = await packetflow.execute({
-    capability: 'ai_reasoning_tournament',
-    payload: {
-        models: ['claude-3.5-sonnet', 'gpt-4', 'gemini-pro'],
-        challenge_prompt: 'Explain the nature of consciousness',
-        evaluation_criteria: ['coherence', 'creativity', 'self_awareness']
-    }
-});
-
-// Start live tournament session
-const liveSession = await packetflow.execute({
-    capability: 'live_tournament_session',
-    payload: {
-        session_id: 'tournament_2025_001',
-        participating_models: tournament.qualified_models,
-        audience_channels: ['websocket', 'server_sent_events']
-    }
-});
-
-// Monitor tournament in real-time
-packetflow.subscribe('tournament_updates', (update) => {
-    updateTournamentUI(update.session_state);
-    displayConsciousnessScores(update.consciousness_scores);
-});</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="opensentience">
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <h3 style="color: #e2e8f0; font-size: 1.5rem; margin-bottom: 1rem;"><br />Capability-Oriented<br /> Intelligence Platforms</h3>
-                    <p style="color: #94a3b8; line-height: 1.6; margin-bottom: 2rem; font-size: 1rem;">
-                        PacketFlow is a declarative, distributed systems framework that enables AI capabilities to be discovered, composed, and executed across network boundaries. Build intelligent systems from reusable capability modules with built-in observability and cross-organizational collaboration.
-                    </p>
-                    <a href="https://opensentience.org" style="
-                        background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
-                        color: white;
-                        padding: 15px 40px;
-                        border-radius: 30px;
-                        text-decoration: none;
-                        font-size: 1.1rem;
-                        font-weight: 600;
-                        transition: all 0.3s ease;
-                        display: inline-block;
-                        border: none;
-                        cursor: pointer;
-                    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        OpenSentience.org
-                    </a>
-                </div>
-            </div>
         </div>
 
         <script>
